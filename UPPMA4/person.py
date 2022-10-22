@@ -27,3 +27,5 @@ class Person(object):
 			return n
 		else:
 			return (fib_py(n-1) + fib_py(n-2))
+
+print(Person.fib_py(4))
