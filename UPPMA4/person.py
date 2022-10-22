@@ -1,4 +1,5 @@
 """ Python interface to the C++ Person class """
+from numba import njit
 import ctypes
 lib = ctypes.cdll.LoadLibrary('./libperson.so')
 
@@ -20,3 +21,9 @@ class Person(object):
         
 	def __del__(self):
 		return lib.Person_delete(self.obj)
+
+	def fib_py(self,age):
+		if n <= 1:
+			return n
+		else:
+			return (fib_py(n-1) + fib_py(n-2))
