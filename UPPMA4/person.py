@@ -22,9 +22,17 @@ class Person(object):
 	def __del__(self):
 		return lib.Person_delete(self.obj)
 
-	def fib_py(self,n):
+def main():
+	def fib_py(n):
 		if n <= 1:
 			return n
 		else:
 			return (fib_py(n-1) + fib_py(n-2))
+	@njit
+	def fib_numba(n):
+		if n <= 1:
+                        return n
+                else:
+                        return (fib_py(n-1) + fib_py(n-2))
+_age=10
 
