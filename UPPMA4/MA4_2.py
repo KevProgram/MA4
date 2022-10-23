@@ -20,7 +20,7 @@ def main():
 		else:		
 			return (fib_numba(n-1) + fib_numba(n-2))
 	
-	N=10
+	N=9
 	fib_py_list= []
 	fib_numba_list=[]
 	fib_cpp_list=[]
