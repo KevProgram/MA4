@@ -2,6 +2,7 @@
 from numba import njit
 from time import perf_counter as pc
 from person import Person
+import matplotlib.pyplot as plot
 
 def main():
 	
@@ -32,9 +33,36 @@ def main():
 			fib_py_list(i).append
 		return fib_py_list
 	print(caller())
+	r= range(30, 45)
+	for n in r:
+		print('N: ', n)
+		start = pc()
+		fib_py(n)
+		end = pc()
+		fib_py_list.append(end-start)
+		print('fib_py: ', end-start)
+
+		start = pc()
+		fib_numba(n)
+		end = pc()
+		fib_numba_list.append(end - start)
+		print('fib_numba: ', end-start)
+
+		start = pc()
+		f = Person(n)
+		f.fib()
+		end = pc()
+		fib_cpp_list.append(end - start)
+		print('fibc: ', end-start)
+
+	plot.plot(r, fib_py_list, label='Python')
+	plot.plot(r, fib_numba_list, label='Numba')
+	plot.plot(r, fib_cpp_list, label='C++')
+	plot.savefig('plot_MA42.png')
 
 
 
+	
 # _age= 10
 # start=pc()
 # print(fib_py(_age))
