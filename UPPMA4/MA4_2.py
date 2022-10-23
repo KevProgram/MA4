@@ -4,10 +4,7 @@ from time import perf_counter as pc
 from person import Person
 
 def main():
-	f = Person(5)
-	print(f.get())
-	f.set(9)
-	print(f.get())
+	
 	
 
 	def fib_py(n):
