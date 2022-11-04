@@ -33,7 +33,7 @@ def main():
 	f=Person(N)
 	f.fib()
 	
-	r=range(30,40)
+	r=range(30,35)
 	l=range(20,30)
 	
 #Question 5: py and numba for n=20-30
@@ -49,7 +49,7 @@ def main():
 		fib_numba(n)
 		end = pc()
 		fib_numba_list_2.append(end - start)
-		#print('fib_numba: ', end-start)
+		print('fib_numba: ', end-start)
 #Question 4: all for n=30-45
 	for n in r:
 		print('N: ', n)
@@ -57,20 +57,20 @@ def main():
 		fib_py(n)
 		end = pc()
 		fib_py_list.append(end-start)
-		#print('fib_py: ', end-start)
+		print('fib_py: ', end-start)
 
 		start = pc()
 		fib_numba(n)
 		end = pc()
 		fib_numba_list.append(end - start)
-		#print('fib_numba: ', end-start)
+		print('fib_numba: ', end-start)
 
 		start = pc()
 		f = Person(n)
 		f.fib()
 		end = pc()
 		fib_cpp_list.append(end - start)
-		#print('fibc: ', end-start)
+		print('fibc: ', end-start)
 	#Q6=[]	#ctest=47
 	#start=pc()
 	#f=Person(ctest)
@@ -82,11 +82,9 @@ def main():
 	plt.plot(r, fib_py_list, label='Python')
 	plt.plot(r, fib_numba_list, label='Numba')
 	plt.plot(r, fib_cpp_list, label='C++')
-	plt.show()
 	plt.savefig('plot_MA42.png')
 
 #xaxs
-
 
 	
 # _age= 10
