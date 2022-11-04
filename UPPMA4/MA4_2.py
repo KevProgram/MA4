@@ -24,7 +24,11 @@ def main():
 	N=9
 	fib_py_list= []
 	fib_numba_list=[]
-	fib_cpp_list=[]
+	fib_cpp_list= []
+	
+	fib_numba_list_2=[]
+	fib_py_list_2=[]
+
 
 	f=Person(N)
 	f.fib()
@@ -38,13 +42,13 @@ def main():
 		start = pc()
 		fib_py(n)
 		end = pc()
-		fib_py_list.append(end-start)
+		fib_py_list_2.append(end-start)
 		#print('fib_py: ', end-start)
 
 		start = pc()
 		fib_numba(n)
 		end = pc()
-		fib_numba_list.append(end - start)
+		fib_numba_list_2.append(end - start)
 		#print('fib_numba: ', end-start)
 #Question 4: all for n=30-45
 	for n in r:
@@ -67,8 +71,7 @@ def main():
 		end = pc()
 		fib_cpp_list.append(end - start)
 		#print('fibc: ', end-start)
-	#Q6=[]
-	#ctest=47
+	#Q6=[]	#ctest=47
 	#start=pc()
 	#f=Person(ctest)
 	#f.fib()
