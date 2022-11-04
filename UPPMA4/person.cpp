@@ -69,7 +69,7 @@ class Person{
 	};
  
 Person::Person(int n){
-	age = in;
+	age = n;
 	}
  
 int Person::get(){
@@ -92,7 +92,7 @@ int Person::fibn(int n){
 	}
 }
 
-
+//hejsan
 
 extern "C"{
 	Person* Person_new(int n) {return new Person(n);}
