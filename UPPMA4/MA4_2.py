@@ -33,7 +33,7 @@ def main():
 	f=Person(N)
 	f.fib()
 	
-	r=range(10, 15)
+	r=range(30,40)
 	l=range(20,30)
 	
 #Question 5: py and numba for n=20-30
@@ -102,6 +102,18 @@ def main():
 
 	
 # n= Person(_age)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
