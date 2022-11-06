@@ -69,7 +69,7 @@ def main():
 		print('fibc: ', end-start)
 
 
- 	plt.plot(r, fib_py_list, label='Python')
+	plt.plot(r, fib_py_list, label='Python')
 	plt.plot(r, fib_numba_list, label='Numba')
 	plt.plot(r, fib_cpp_list, label='C++')
 	plt.savefig('plot_MA42.ng')
@@ -93,7 +93,7 @@ def main():
 	Q6_numba.append(end-start)
 	print('Numba n=47: ', Q6_numba)
 
-
+	
 
 
 
