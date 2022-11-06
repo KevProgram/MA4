@@ -39,7 +39,7 @@ def main():
 		fib_py(n)
 		end = pc()
 		fib_py_list_2.append(end-start)
-		#print('fib_py: ', end-start)
+		print('fib_py: ', end-start)
 
 		start = pc()
 		fib_numba(n)
@@ -72,7 +72,7 @@ def main():
 	plt.plot(r, fib_py_list, label='Python')
 	plt.plot(r, fib_numba_list, label='Numba')
 	plt.plot(r, fib_cpp_list, label='C++')
-	plt.savefig('plot_MA42.ng')
+	plt.savefig('plot_MA42.png')
 #Question 6: Calculate n=47 with numba and C++
 	n_6=40
 
@@ -94,7 +94,6 @@ def main():
 	print('Numba n=47: ', Q6_numba)
 
 	
-
 
 
 
