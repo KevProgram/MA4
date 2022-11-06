@@ -21,20 +21,16 @@ def main():
 		else:		
 			return (fib_numba(n-1) + fib_numba(n-2))
 	
-	N=9
+	
 	fib_py_list= []
 	fib_numba_list=[]
 	fib_cpp_list= []
 	
 	fib_numba_list_2=[]
 	fib_py_list_2=[]
-
-
-	f=Person(N)
-	f.fib()
 	
-	r=range(30,35)
-	l=range(20,30)
+	r=range(30,36)
+	l=range(20,31)
 	
 #Question 5: py and numba for n=20-30
 	for n in l:
@@ -71,42 +67,31 @@ def main():
 		end = pc()
 		fib_cpp_list.append(end - start)
 		print('fibc: ', end-start)
-	#Q6=[]	#ctest=47
-	#start=pc()
-	#f=Person(ctest)
-	#f.fib()
-	#end=pc()
-	#Q6.append(end-start)
-	
 
-	plt.plot(r, fib_py_list, label='Python')
+
+ 	plt.plot(r, fib_py_list, label='Python')
 	plt.plot(r, fib_numba_list, label='Numba')
 	plt.plot(r, fib_cpp_list, label='C++')
-	plt.savefig('plot_MA42.png')
+	plt.savefig('plot_MA42.ng')
+#Question 6: Calculate n=47 with numba and C++
+	n_6=40
 
-#xaxs
+	#C++
+	Q6_Cpp=[]
+	start=pc()
+	f=Person(n_6)
+	f.fib()
+	end=pc()
+	Q6_Cpp.append(end-start)
+	print('C++ n=47: ',Q6_Cpp)
 
-	
-# _age= 10
-# start=pc()
-# print(fib_py(_age))
-# end=pc()
-# print("fib_py:", end-start)
-# start=pc()
-# print(fib_numba(_age))
-# end=pc()
-# print("numba: ", end-start)
-	
-
-	
-# n= Person(_age)
-
-
-
-
-
-
-
+	#Numba
+	Q6_numba=[]
+	start=pc()
+	fib_numba(n_6)
+	end=pc()
+	Q6_numba.append(end-start)
+	print('Numba n=47: ', Q6_numba)
 
 
 
