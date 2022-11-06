@@ -73,25 +73,22 @@ def main():
 	plt.plot(r, fib_numba_list, label='Numba')
 	plt.plot(r, fib_cpp_list, label='C++')
 	plt.savefig('plot_MA42.ng')
+
 #Question 6: Calculate n=47 with numba and C++
 	n_6=40
 
 	#C++
-	Q6_Cpp=[]
 	start=pc()
 	f=Person(n_6)
 	f.fib()
 	end=pc()
-	Q6_Cpp.append(end-start)
-	print('C++ n=47: ',Q6_Cpp)
+	print('C++ n=47: ',end-start)
 
 	#Numba
-	Q6_numba=[]
 	start=pc()
 	fib_numba(n_6)
 	end=pc()
-	Q6_numba.append(end-start)
-	print('Numba n=47: ', Q6_numba)
+	print('Numba n=47: ', end-start)
 
 	
 

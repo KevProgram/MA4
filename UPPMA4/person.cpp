@@ -10,7 +10,7 @@ class Person{
 		void set(int);
 	private:
 		int age;
-		int fibn(int);
+		int fib_private(int);
 	};
  
 Person::Person(int n){
@@ -26,10 +26,10 @@ void Person::set(int n){
 	}
 
 int Person::fib(){
-	return fibn(age);
+	return fib_private(age);
 }
 
-int Person::fibn(int n){
+int Person::fib_private(int n){
 	if (n <= 1){
 	return (n);
 	} else {
@@ -37,8 +37,6 @@ int Person::fibn(int n){
 	}
 }
 
-
-//hejsan
 
 extern "C"{
 	Person* Person_new(int n) {return new Person(n);}
