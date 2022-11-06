@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 
 def main():
 	
-	#Test
 
 	def fib_py(n):
 		if n <= 1:
@@ -29,7 +28,7 @@ def main():
 	fib_numba_list_2=[]
 	fib_py_list_2=[]
 	
-	r=range(30,36)
+	r=range(30,46)
 	l=range(20,31)
 	
 #Question 5: py and numba for n=20-30
@@ -46,6 +45,7 @@ def main():
 		end = pc()
 		fib_numba_list_2.append(end - start)
 		print('fib_numba: ', end-start)
+
 #Question 4: all for n=30-45
 	for n in r:
 		print('N: ', n)
@@ -73,8 +73,9 @@ def main():
 	plt.plot(r, fib_numba_list, label='Numba')
 	plt.plot(r, fib_cpp_list, label='C++')
 	plt.savefig('plot_MA42.png')
+
 #Question 6: Calculate n=47 with numba and C++
-	n_6=40
+	n_6=47
 
 	#C++
 	start=pc()
@@ -87,8 +88,7 @@ def main():
 	start=pc()
 	fib_numba(n_6)
 	end=pc()
-	Q6_numba.append(end-start)
-	print('Numba n=47: ', Q6_numba)
+	print('Numba n=47: ', end-start)
 
 	
 
@@ -100,3 +100,7 @@ def main():
 
 if __name__ == '__main__':
 	main()
+
+
+
+
